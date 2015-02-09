@@ -1,0 +1,17 @@
+{
+	"src": "js/src/",
+	"out": "js/dist/",
+	"debug": false,
+	"code": {
+		"main": [
+			"js",
+			"dist",
+			"tokenizer.js"
+		],
+		"test": [
+			"test",
+			"js"
+		]
+	},
+	"name": "tokenizer"
+}

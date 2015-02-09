@@ -1,0 +1,33 @@
+{
+	"dependencies": {},
+	"main": "js/dist/tokenizer.js",
+	"author": "aureooms",
+	"scripts": {
+		"build": "./node_modules/.bin/aureooms-node-package-build",
+		"doc": "./node_modules/.bin/groc",
+		"test": "./node_modules/.bin/aureooms-node-package-test"
+	},
+	"keywords": [
+		"bricks",
+		"javascript",
+		"js",
+		"language",
+		"tokenizer",
+		"tokens"
+	],
+	"license": "AGPL-3.0",
+	"homepage": "http://aureooms.github.io/js-tokenizer/",
+	"name": "aureooms-js-tokenizer",
+	"version": "0.0.0",
+	"devDependencies": {
+		"aureooms-node-package": "^2.0.3"
+	},
+	"bugs": {
+		"url": "https://github.com/aureooms/js-tokenizer/issues"
+	},
+	"description": "tokenize code bricks for JavaScript",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/aureooms/js-tokenizer.git"
+	}
+}
