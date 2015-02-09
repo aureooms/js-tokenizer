@@ -1,6 +1,6 @@
 {
 	"repo": "aureooms/js-tokenizer",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"main": "js/dist/tokenizer.js",
 	"scripts": [
 		"js/dist/tokenizer.js"
