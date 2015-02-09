@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="en"><head><title>longest</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content=""><meta name="groc-document-path" content="longest"><meta name="groc-project-path" content="js/src/longest.js"><meta name="groc-github-url" content="https://github.com/aureooms/js-tokenizer"><link rel="stylesheet" type="text/css" media="all" href="assets/style.css"><script type="text/javascript" src="assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/aureooms/js-tokenizer/blob/master/js/src/longest.js">js/src/longest.js</a></div></div><div id="document"><div class="segment"></div><div class="segment"><div class="comments doc-section"><div class="wrapper"><p>Parameters:</p>
+<ul>
+<li><p><strong>empty must be a trie root.</strong><br/>(root of the trie)</p>
+</li>
+<li><p><strong>tokens must be an array.</strong><br/>(array of tokens)</p>
+</li>
+<li><p><strong>out must be an array.</strong><br/>(output array)</p>
+</li>
+</ul></div></div><div class="code"><div class="wrapper"><span class="hljs-keyword">var</span> longest = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">( empty , tokens , out )</span> </span>{
+
+	<span class="hljs-keyword">var</span> i , j , len , node , next , val ;
+
+	node = empty ;
+
+	i = <span class="hljs-number">0</span> ;
+	j = <span class="hljs-number">0</span> ;
+	len = tokens.length ;
+
+	<span class="hljs-keyword">while</span> ( j &lt; len ) {
+
+		next = node.get( tokens , j ) ;
+
+		<span class="hljs-keyword">if</span> ( next === <span class="hljs-literal">undefined</span> ) {
+
+			<span class="hljs-keyword">if</span> ( node === empty ) {</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>assert i === j</p></div></div><div class="code"><div class="wrapper">				++j ;
+				out.push( [ <span class="hljs-literal">undefined</span> , i , j ] ) ;
+				i = j ;
+				<span class="hljs-keyword">continue</span> ;
+
+			}
+
+			val = node.value( ) ;</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>assert val !== undefined</p></div></div><div class="code"><div class="wrapper">			out.push( [ val , i , j ] ) ;
+			node = empty ;
+			i = j ;
+			<span class="hljs-keyword">continue</span> ;
+
+		}
+
+		node = next ;
+		++j ;
+
+	}
+
+	<span class="hljs-keyword">if</span> ( node !== empty ) {
+
+		val = node.value( ) ;
+		out.push( [ val , i , len ] ) ;
+
+	}
+
+} ;
+
+exports.longest = longest ;</div></div></div></div></body></html>
