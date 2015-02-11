@@ -1,13 +1,14 @@
 
 /**
  * @param {token} esc the escape token
- * @param {type} rawtype the type for tokens not in map
- * @param {map} map a token -> type map
+ * @param {type} raw the type for tokens not in map
+ * @param {map} umap a token -> type map for non escaped tokens
+ * @param {map} emap a token -> type map for escaped tokens
  * @param {array} tokens array of tokens
  * @param {array} out output array
  */
 
-var unescape = function ( esc , rawtype , map , tokens , out ) {
+var unescape = function ( esc , raw , umap , emap , tokens , out ) {
 
 	var i , len , token ;
 
@@ -16,22 +17,34 @@ var unescape = function ( esc , rawtype , map , tokens , out ) {
 		token = tokens[i] ;
 
 		// next token is escaped
-		if ( token === esc ) {
+		if ( token.item === esc ) {
+
 			++i ;
-			out.push( [ rawtype , tokens[i] ] ) ;
-			continue ;
+
+			if ( i === len ) {
+				// error
+				return false ;
+			}
+
+			token = tokens[i] ;
+
+			// token has special meaning
+			if ( token.item in emap ) {
+				token.type = emap[token.item] ;
+			}
+
 		}
 
-		// token has special meaning
-		if ( token in map ) {
-			out.push( [ map[token] , token ] ) ;
-			continue ;
+		// token is not escaped and has special meaning
+		else if ( token.item in umap ) {
+			token.type = umap[token.item] ;
 		}
 
-		// token is just a raw one
-		out.push( [ rawtype , token ] ) ;
+		out.push( token ) ;
 
 	}
+
+	return true ;
 
 } ;
 
