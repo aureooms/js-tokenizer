@@ -18,7 +18,7 @@
 	"license": "AGPL-3.0",
 	"homepage": "http://aureooms.github.io/js-tokenizer/",
 	"name": "aureooms-js-tokenizer",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"devDependencies": {
 		"aureooms-node-package": "^2.0.3"
 	},
