@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang="en"><head><title>tokenize</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content=""><meta name="groc-document-path" content="tokenize"><meta name="groc-project-path" content="js/src/tokenize.js"><meta name="groc-github-url" content="https://github.com/aureooms/js-tokenizer"><link rel="stylesheet" type="text/css" media="all" href="assets/style.css"><script type="text/javascript" src="assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/aureooms/js-tokenizer/blob/master/js/src/tokenize.js">js/src/tokenize.js</a></div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper"><span class="hljs-keyword">var</span> tokenize = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">( type , sequence , out )</span> </span>{
+
+	<span class="hljs-keyword">var</span> i , len , item ;
+
+	len = sequence.length ;
+
+	<span class="hljs-keyword">for</span> ( i = <span class="hljs-number">0</span> ; i &lt; len ; ++i ) {
+
+		item = sequence[i] ;
+
+		out.push( <span class="hljs-keyword">new</span> Token( type , item ) ) ;
+
+	}
+
+} ;
+
+exports.tokenize = tokenize ;</div></div></div></div></body></html>
