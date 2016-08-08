@@ -20,7 +20,7 @@
 	"name": "aureooms-js-tokenizer",
 	"version": "0.0.3",
 	"devDependencies": {
-		"aureooms-node-package": "^2.0.3"
+		"aureooms-node-package": "^7.0.0"
 	},
 	"bugs": {
 		"url": "https://github.com/aureooms/js-tokenizer/issues"
