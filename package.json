@@ -16,7 +16,7 @@
 		"tokens"
 	],
 	"license": "AGPL-3.0",
-	"homepage": "http://aureooms.github.io/js-tokenizer/",
+	"homepage": "http://make-github-pseudonymous-again.github.io/js-tokenizer/",
 	"name": "@aureooms/js-tokenizer",
 	"version": "0.0.3",
 	"devDependencies": {

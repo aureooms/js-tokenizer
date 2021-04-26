@@ -1,4 +1,4 @@
-[js-tokenizer](http://aureooms.github.io/js-tokenizer)
+[js-tokenizer](http://make-github-pseudonymous-again.github.io/js-tokenizer)
 ==
 
 tokenize code bricks for JavaScript

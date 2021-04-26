@@ -1,7 +1,7 @@
 {
   "version": "0.0.3",
   "main": "js/dist/tokenizer.js",
-  "homepage": "http://aureooms.github.io/js-tokenizer/",
+  "homepage": "http://make-github-pseudonymous-again.github.io/js-tokenizer/",
   "description": "tokenize code bricks for JavaScript",
   "license": "AGPL-3.0",
   "ignore": [
